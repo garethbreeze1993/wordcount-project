@@ -1,0 +1,19 @@
+<h1> Below is the text you want to be counted: </h1>
+
+<a href="{% url 'home'%}">Want to do this again?</a>
+
+<h2> {{fulltext}} </h2>
+
+<h2> The text you typed has {{wordcount}} words. </h2>
+
+<h2> Below is a count of every word and how many times it appears in the text </h2>
+<h3>
+{% for word, totalcount in sortedwords %}
+
+{{word}} =
+
+{{totalcount}}
+<br />
+
+{% endfor %}
+</h3>
